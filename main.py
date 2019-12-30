@@ -21,10 +21,12 @@ def see_movies():
     print(x)
 
 def find_movie_by_attribute(attribute):
-  
+  res = [ sub[attribute] for sub in movie_list ] 
+  print(res)
 
 
 
 
 add_movies()
 see_movies()
+find_movie_by_attribute("reeee")
