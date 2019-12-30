@@ -30,3 +30,19 @@ def find_movie_by_attribute():
     if movie[find_property] == find_property_value:
       found_movies.append(movie)
   see_movies(found_movies) 
+
+def user_choice():
+    user_input = input("Enter 'a' to add a movie, 'l' to see your movies, 'f' to find a movie, and 'q' to quit: ")
+    while user_input != 'q':
+        if user_input == 'a':
+            add_movies()
+        elif user_input == 'l':
+            see_movies(movie_list)
+        elif user_input == 'f':
+            movie = find_movie_by_attribute()
+            print(movie or 'No movies found.')
+        else:
+            print('Unknown command-please try again.')
+        user_input = input("\nEnter 'a' to add a movie, 'l' to see your movies, 'f' to find a movie, and 'q' to quit: ")
+
+user_choice()
