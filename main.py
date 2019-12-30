@@ -9,16 +9,16 @@ def add_movies():
   movie_year = int(input("Enter the movie released year"))
   movie_director = input("Enter the movie director's name ")
 
-  sample_dict = {}
-  sample_dict["name"] = movie_name
-  sample_dict["year"] = movie_year
-  sample_dict["director"] = movie_director
-  movie_list.append(sample_dict)
+  movie_list.append(
+    {
+      'name': movie_name,
+      'year': movie_year,
+      'director': movie_director
+    }
+  )
 
 def see_movies():
-  print("The movies list is as follows ")
-  for x in movie_list:
-    print(x)
+    print(movie_list)
 
 def find_movie_by_attribute(attribute):
   try:
