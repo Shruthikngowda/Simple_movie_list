@@ -17,8 +17,8 @@ def add_movies():
     }
   )
 
-def see_movies():
-    print(movie_list)
+def see_movies(movies_list):
+    print(movies_list)
 
 def find_movie_by_attribute():
   find_property = input("what property you want to check ? ")
@@ -28,12 +28,5 @@ def find_movie_by_attribute():
 
   for movie in movie_list:
     if movie[find_property] == find_property_value:
-      found_movies.append(found_movies)
-    
-  return found_movies
-
-
-
-add_movies()
-see_movies()
-find_movie_by_attribute()
+      found_movies.append(movie)
+  see_movies(found_movies) 
