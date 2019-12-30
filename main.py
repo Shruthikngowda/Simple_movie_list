@@ -6,7 +6,7 @@ def add_movies():
   print("Adding a movie")
   print("Please enter movie details")
   movie_name = input("Enter the movie name ")
-  movie_year = input("Enter the movie released year")
+  movie_year = int(input("Enter the movie released year"))
   movie_director = input("Enter the movie director's name ")
 
   sample_dict = {}
