@@ -18,7 +18,10 @@ def add_movies():
   )
 
 def see_movies(movies_list):
-    print(movies_list)
+  for movie in movies_list:
+    print(f"Name: {movie['name']}")
+    print(f"Director: {movie['director']}")
+    print(f"Release year: {movie['year']}")
 
 def find_movie_by_attribute():
   find_property = input("what property you want to check ? ")
@@ -32,17 +35,17 @@ def find_movie_by_attribute():
   see_movies(found_movies) 
 
 def user_choice():
-    user_input = input("Enter 'a' to add a movie, 'l' to see your movies, 'f' to find a movie, and 'q' to quit: ")
+    user_input = input("Enter 'a' to add a movie, 's' to see your movies, 'f' to find a movie, and 'q' to quit: ")
     while user_input != 'q':
         if user_input == 'a':
             add_movies()
-        elif user_input == 'l':
+        elif user_input == 's':
             see_movies(movie_list)
         elif user_input == 'f':
             movie = find_movie_by_attribute()
             print(movie or 'No movies found.')
         else:
             print('Unknown command-please try again.')
-        user_input = input("\nEnter 'a' to add a movie, 'l' to see your movies, 'f' to find a movie, and 'q' to quit: ")
+        user_input = input("\nEnter 'a' to add a movie, 's' to see your movies, 'f' to find a movie, and 'q' to quit: ")
 
 user_choice()
