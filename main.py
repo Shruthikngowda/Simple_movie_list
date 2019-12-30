@@ -21,8 +21,11 @@ def see_movies():
     print(x)
 
 def find_movie_by_attribute(attribute):
-  res = [ sub[attribute] for sub in movie_list ] 
-  print(res)
+  try:
+    res = [ sub[attribute] for sub in movie_list ]
+  except:
+    print("Wrong attribute") 
+  #print(res)
 
 
 
